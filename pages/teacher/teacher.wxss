@@ -1,0 +1,60 @@
+/* pages/teacher/teacher.wxss */
+
+.teacher {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding-right: 30rpx;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    background: #1d829e;
+    /* background-size: 750rpx 500rpx; */
+}
+
+.box {
+    background: #f4fafc;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.head {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 750rpx;
+}
+
+.head image {
+    width: 100%;
+}
+
+.list {
+    position: absolute;
+    top: 270rpx;
+    left: 0;
+    width: 750rpx;
+    text-align: center;
+    /* background: #f4fafc */
+}
+.item:first-child{
+    background: transparent !important;
+    padding-top: 0
+}
+.item {
+    padding-top: 75px;
+    background: #ffffff;
+}
+
+.item image:first-child {
+    display: block;
+    margin: auto;
+    width: 700rpx;
+    margin-bottom: 30rpx
+}
+
+.item image:last-child {
+    display: block;
+    margin: auto;
+    width: 690rpx;
+}

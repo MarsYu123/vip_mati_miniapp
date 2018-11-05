@@ -1,0 +1,69 @@
+<!-- pages/home/home.wxml -->
+<view class="home">
+
+  <view class="on_sale">
+    <view class="h1">
+      在售课程
+      <text> / New Courses</text>
+    </view>
+    <view class="course">
+
+      <block wx:if="{{online.length > 0}}">
+        <view class="content_item" bindtap="jump_course" id="{{online[0].id}}" data-kind="{{online[0].course_kind}}">
+          <view class="title">{{online[0].course_name}}</view>
+          <view class="cover">
+            <image src="https://home.mati.hk/Public{{online[0].cover}}" mode="widthFix" />
+          </view>
+          <view class="time">
+            <image src="https://home.mati.hk/Public/web_image/course/time.png" />
+            <text>{{online[0].start_time}}至{{online[0].end_time}}</text>
+          </view>
+          <view class="position">
+            <image src="https://home.mati.hk/Public/web_image/course/position.png" />
+            <text>{{online[0].address}}</text>
+          </view>
+          <view class="teacher">
+            <image src="https://home.mati.hk/Public/web_image/course/teacher.png" />
+            <text>{{online[0].teacher}}</text>
+          </view>
+          <view class="price" wx:if="{{!is_ios}}">
+            <image src="https://home.mati.hk/Public/web_image/course/price.png" />
+            <text class="new_price">￥{{online[0].now_price}}</text>
+            <text class="old_price" wx:if="{{online[0].old_price != ''}}">￥{{online[0].old_price}}</text>
+            <text class="vip_tips" wx:if="{{!user_info.isFinalVIp || hasUserInfo == false}}">永久VIP会员免费</text>
+          </view>
+          <block wx:if="{{!is_ios}}">
+            <view class="now_pay" wx:if="{{user_info}}" data-id="{{online[0].id}}" data-kind="{{online[0].kind}}">
+              {{user_info.isFinalVIp ? '立即报名':'立即购买'}}
+            </view>
+            <view class="now_pay" wx:else>
+              立即报名
+            </view>
+          </block>
+          <block wx:else>
+            <view class="now_pay">
+              了解详情
+            </view>
+          </block>
+        </view>
+      </block>
+      <block wx:else>
+        <view class="default">
+          <image src="https://home.mati.hk/Public/web_image/home/default.png" mode='widthFix' />
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class="off_sale">
+    <view class="h1">
+      往期课程
+      <text> / Past Courses</text>
+    </view>
+    <view class="coures_list">
+      <view class="coures_item" wx:for="{{history}}" id="{{item.id}}" data-kind="{{item.course_kind}}" bindtap="jump_course">
+        <image src="https://home.mati.hk/Public{{item.cover}}" mode="widthFix" />
+        <view class="item_title">{{item.course_name}}</view>
+      </view>
+    </view>
+  </view>
+</view>

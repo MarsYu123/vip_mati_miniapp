@@ -1,0 +1,12 @@
+<!--pages/mould/card_list/card_list.wxml-->
+<template name="card_list" data="val">
+     <view class="cont_list">
+            <view class="list">
+                <view class="item_card" wx:for="{{val}}">
+                    <image src="https://home.mati.hk/Public/web_image/buy_courses/tap.png" />
+                    <text class="card_num">{{item.kaci_number}}</text>
+                    <text class="card_time">有效期：至{{item.life_time}}</text>
+                </view>
+            </view>
+        </view>
+</template>

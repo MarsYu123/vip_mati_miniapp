@@ -1,0 +1,243 @@
+/* pages/home/home.wxss */
+page {
+  width: 100%;
+  height: auto;
+  background: #ffffff;
+  overflow-x: hidden
+}
+
+.home {
+  overflow-x: hidden;
+  width: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+
+/* 视频 */
+.video {
+  margin: auto;
+  margin-top: 20rpx;
+  margin-bottom: 120rpx;
+  width: 640rpx;
+  height: 360rpx;
+  position: relative;
+}
+
+
+/* 广告 */
+.advertising {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.mb {
+  width: 100%;
+  height: 100%;
+  background: rgba(140, 140, 139, 0.67)
+}
+
+.box {
+  width: 560rpx;
+  height: 693rpx;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -300%);
+}
+
+.box image {
+  width: 100%;
+  height: 100%;
+}
+
+.box text {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 210rpx;
+  height: 70rpx;
+  bottom: 25rpx;
+}
+
+.close {
+  width: 55rpx;
+  height: 55rpx;
+  position: absolute;
+  right: 10rpx;
+  top: 0;
+}
+
+.button,
+.card_right_shop {
+  margin: auto;
+  width: 700rpx;
+  height: 95rpx;
+  line-height: 95rpx;
+  background: #1d829e;
+  color: #ffffff;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 36rpx;
+  margin-bottom: 180rpx
+}
+
+
+
+
+/* 在售课程 */
+.on_sale {
+  margin: 0 35rpx;
+}
+
+.h1 {
+  font-size: 32rpx;
+  color: #06617A;
+  margin: 35rpx 0;
+  padding-bottom: 10rpx;
+  border-bottom: 1px #a0a0a0 solid
+}
+
+.h1 text {
+  font-size: 24rpx;
+  color: #6e6d6d;
+  /* font-style: italic */
+}
+
+.course {
+  /* margin: 0 10rpx; */
+  background: #F6FBFD;
+}
+
+.content_item {
+  padding: 15rpx 30rpx;
+  /* padding-left: 30rpx; */
+  font-size: 0;
+  margin-bottom: 50rpx;
+  position: relative;
+
+}
+
+.content_item:last-child {
+  margin-bottom: 20rpx;
+}
+
+.title {
+  font-size: 28rpx;
+}
+
+.cover {
+  margin: 20rpx 0;
+}
+
+.cover image {
+  width: 100%;
+}
+
+.teacher image,
+.position image,
+.time image,
+.price image {
+  width: 25rpx;
+  height: 27rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.time text,
+.teacher text,
+.position text,
+.price text {
+  font-size: 24rpx;
+  padding-left: 28rpx;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 35rpx;
+  width: 350rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.new_price {
+  font-size: 29rpx !important;
+  color: #e85858;
+  display: inline-block;
+  width: auto !important;
+}
+
+.old_price {
+  font-size: 24rpx;
+  color: #aeadad;
+  display: inline-block;
+  width: auto !important;
+  text-align: left;
+  padding-left: 15rpx !important;
+  text-decoration: line-through
+}
+
+/* 往期课程 */
+.off_sale {
+  margin: 0 35rpx
+}
+
+.coures_list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.coures_item {
+  width: 330rpx;
+  margin-bottom: 40rpx;
+  flex-shrink: 0
+}
+
+.coures_item image {
+  width: 100%;
+  margin-bottom: 15rpx
+}
+
+.item_title {
+  font-size: 24rpx;
+  text-align: center;
+  height: 65rpx;
+}
+
+.default {
+  width: 596rpx;
+  height: 277rpx;
+  margin: auto;
+}
+
+.default image {
+  width: 100%
+}
+
+
+.vip_tips {
+  font-size: 18rpx !important;
+  color: #aeadad !important;
+  width: auto !important;
+  vertical-align: text-bottom
+}
+
+.now_pay {
+  width: 160rpx;
+  height: 54rpx;
+  position: absolute;
+  line-height: 54rpx;
+  font-size: 24rpx;
+  text-align: center;
+  bottom: 14rpx;
+  right: 44rpx;
+  border: 1px solid #1D829E;
+  border-radius: 54rpx;
+  color: #1D829E;
+}

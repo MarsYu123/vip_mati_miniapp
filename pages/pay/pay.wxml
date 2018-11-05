@@ -1,0 +1,68 @@
+<!-- pages/pay/pay.wxml -->
+<view class="pay_box">
+    <view class="pay_card">
+        <view class="card_img">
+            <image src="https://home.mati.hk/Public/web_image/pay/card.png" />
+            <text class="card_num">卡号：{{phone}}</text>
+        </view>
+        <view class="card_index">
+            <text class="card_index_text">38000元</text>
+            <view class="card_check">
+                <view class="subtract" bindtap="sub"></view>
+                <text class="num">{{num}}</text>
+                <view class="add" bindtap="add"></view>
+            </view>
+        </view>
+    </view>
+    <view class="card_msg">
+        <view class="card_title">
+            <view class="card_h1">
+                <text>学习卡权益</text>
+                <!-- <image bindtap="open_tips" src="https://home.mati.hk/Public/web_image/pay/tips.png" /> -->
+            </view>
+            <text class="card_h2">优质的课程，少不了体贴的服务</text>
+        </view>
+        <view class="msg_list">
+            <view class="msg_item">
+                <image src="https://home.mati.hk/Public/web_image/pay/tp.png?a=2" />
+            </view>
+            <view class="msg_item">
+                <image src="https://home.mati.hk/Public/web_image/pay/zk.png?a=1" />
+            </view>
+            <view class="msg_item">
+                <image src="https://home.mati.hk/Public/web_image/pay/th.png?a=1" />
+            </view>
+            <view class="msg_item">
+                <image src="https://home.mati.hk/Public/web_image/pay/xz.png?a=1" />
+            </view>
+        </view>
+        <view class="open_all" bindtap="open_tips">
+            <text class="text">查看更多</text><text class="arrow"></text>
+        </view>
+    </view>
+    <view class="pay_sum">
+        <text class="money">￥{{money}}</text>
+        <text class="money_tip">可兑换{{num*10}}次课程</text>
+        <button bindtap="pay_start">立即购买</button>
+    </view>
+    <!-- 遮罩层 -->
+    <view class="button_card" wx:if="{{open_window}}">
+        <!-- 遮罩层 -->
+        <view class="button_mask" bindtap="hide_button" wx:if="{{open_window}}"></view>
+        <view class="button_center" animation="{{animate}}" wx:if="{{open_window}}">
+            <image src="https://home.mati.hk/Public/web_image/pay/cancel.png" />
+            <text>您的订单已取消，\n若是遇到支付问题请联系客服</text>
+            <view class="button">
+                <view class="cancel" bindtap="hide_button">
+                    取消
+                </view>
+                <view class="call">
+                    <button open-type="contact"></button>
+                    客服
+                </view>
+            </view>
+        </view>
+    </view>
+    <import src='../mould/call/call.wxml'></import>
+    <template is='call_btn'></template>
+</view>

@@ -1,0 +1,125 @@
+/* pages/user_edit/user_edit.wxss */
+@import '../mould/call/call.wxss';
+page {
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+}
+.user_clear{
+    clear: both;
+    display: block;
+    content: '';
+    visibility: hidden;
+    height: 0;
+}
+.user_msg {
+    padding: 0 33rpx;
+    margin-top: 20rpx;
+    background: #fff
+}
+
+.text_title {
+    /* float: left; */
+    font-size: 30rpx;
+    justify-content:flex-start;
+    display: flex;
+    flex-grow: 1
+}
+
+.head_img,
+.text_input,
+.text_arrow {
+    /* float: right; */
+    display: block
+}
+
+.user::after,.user_head::after {
+    clear: both;
+    display: block;
+    content: '';
+    visibility: hidden;
+    height: 0;
+}
+
+.user_head {
+    height: 160rpx;
+    width: 100%;
+    padding: 17rpx 0;
+    box-sizing: border-box;
+    border-bottom: #edebeb 1px solid;
+    display: flex;
+    justify-content:flex-end
+}
+
+.user_head .text_title {
+    height: 125rpx;
+    line-height: 125rpx;
+}
+
+.text_arrow {
+    width: 20rpx;
+    height: 20rpx;
+    border-bottom: 4rpx solid #aeadad;
+    border-right: 4rpx solid #aeadad;
+    margin: 35rpx 0;
+    transform: rotate(-45deg);
+    border-radius: 4rpx
+}
+.user_head .text_arrow{
+    margin: 60rpx 0;
+}
+.head_img {
+    width: 130rpx;
+    height: 130rpx;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20rpx;
+    border-radius: 50%;
+    border: 4rpx #fff solid;
+    box-shadow: 0 0 20rpx -5rpx #bbbbbb;
+    box-sizing: border-box
+}
+
+.text_title {
+    height: 50rpx;
+    line-height: 50rpx;
+}
+
+.user {
+    border-bottom: #edebeb 1px solid;
+    height: 90rpx;
+    display: flex;
+}
+
+.text_title {
+    line-height: 90rpx;
+    height: 90rpx;
+}
+
+.text_input input,picker,.input_pla{
+    height: 90rpx;
+    width:400rpx;
+    line-height: 90rpx;
+    text-align: right;
+    margin-right:35rpx;
+    font-size: 30rpx;
+    color: #aeadad
+}
+picker view{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap
+}
+.button{
+    font-size: 36rpx;
+    line-height: 100rpx;
+    height: 100rpx;
+    width: 100%;
+    background: #1d829e;
+    color: #ffffff;
+    display: block;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}

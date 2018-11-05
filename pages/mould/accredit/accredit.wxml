@@ -1,0 +1,6 @@
+<!-- pages/mould/accredit/accredit.wxml -->
+<template name="bind">
+  <!-- <view class="accredit" wx:if="{{!hasUserInfo&&canIUse}}">
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">绑定</button>
+  </view> -->
+</template>

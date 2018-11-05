@@ -1,0 +1,241 @@
+/* pages/course/course.wxss */
+@import '../mould/call/call.wxss';
+
+::-webkit-scrollbar {
+  display: none !important;
+  width: 0;
+  height: 0;
+  color: transparent;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  width: 0;
+  height: 0;
+  background: transparent;
+  color: transparent;
+}
+::-webkit-scrollbar-track {
+  width: 0;
+  height: 0;
+  background: transparent;
+  color: transparent;
+}
+.course {
+  height: 100%;
+  box-sizing: border-box;
+  padding-top: 30rpx;
+  margin: 20rpx auto;
+  overflow: hidden;
+}
+
+.nav {
+  width: 456rpx;
+  height: 60rpx;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  border: #1d829e solid 1px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: #ffffff;
+  font-size: 0;
+  margin: auto
+}
+
+.nav .item {
+  width: 230rpx;
+  text-align: center;
+  border-right: 1px #1d829e solid;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  box-sizing: border-box;
+  display: inline-block;
+}
+.nav .item:last-child {
+  border-right: none;
+}
+.nav .item.active {
+  background: #1d829e;
+  color: #ffffff;
+}
+.content {
+  margin-top: 50rpx;
+  position: absolute;
+  top: 60rpx;
+  left: 50%;
+  bottom: 50rpx;
+  transform: translateX(-50%);
+  overflow: hidden;
+  width: 684rpx;
+}
+.list {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  padding-right: 22px;
+  padding-top: 30rpx;
+  width: 100%
+}
+
+.old{
+  /* display: flex;
+  flex-wrap: wrap; */
+}
+.old_item{
+  width: 50%;
+  border-bottom: 1px solid #D9D9D9;
+  display: inline-block;
+  overflow: hidden;
+}
+.old_item image{
+  padding: 0 6rpx;
+  width: 100%;
+  height: 146rpx;
+  box-sizing: border-box
+}
+.old_item text{
+  font-size: 24rpx;
+  margin-top: 10rpx;
+  margin-bottom: 40rpx;
+  text-align: center;
+  display: block
+}
+
+.content_item {
+  padding: 15rpx 44rpx;
+  /* padding-left: 30rpx; */
+  font-size: 0;
+  margin-bottom: 50rpx;
+  background: #F6FBFD;
+  position: relative;
+  box-sizing: border-box;
+
+}
+
+.now_pay{
+  width: 160rpx;
+  height: 54rpx;
+  position: absolute;
+  line-height: 54rpx;
+  font-size: 24rpx;
+  text-align: center;
+  bottom: 14rpx;
+  right: 44rpx;
+  border: 1px solid #1D829E;
+  border-radius: 54rpx;
+  color: #1D829E;
+}
+
+.icon{
+  position: absolute;
+  top: -20rpx;
+  right: 30rpx;
+}
+
+.icon::before{
+  width: 0;
+  height: 0;
+  border-width: 17rpx;
+  border-style: solid;
+  border-color: #1d829e transparent transparent transparent;
+  transform: rotate(-45deg);
+  position: absolute;
+  left: -16rpx;
+  top: 7rpx;
+  display: block;
+  content: ''
+}
+
+
+@media screen and (min-width: 414px){
+  .icon::before{
+    top: 8rpx;
+  }
+}
+
+.icon text{
+  width: 115rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  background: #53a8c0;
+  text-align: center;
+  font-size: 24rpx;
+  color: #ffffff;
+  display: block
+}
+
+.content_item:last-child {
+  margin-bottom: 20rpx;
+  /* margin-top: 40rpx */
+}
+.title {
+  font-size: 28rpx;
+}
+.cover {
+  margin: 20rpx 0;
+}
+.cover image {
+  width: 100%;
+
+}
+.teacher image,
+.position image,
+.time image,
+.price image {
+  width: 25rpx;
+  height: 27rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+.time text,
+.teacher text,
+.position text,
+.price text {
+  font-size: 24rpx;
+  padding-left: 20rpx;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 35rpx;
+  width: 350rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.new_price{
+  font-size: 29rpx !important;
+  color: #e85858;
+  display: inline-block;
+  width: auto !important;
+  vertical-align: text-bottom 
+}
+.old_price{
+  font-size: 24rpx;
+  color: #aeadad;
+  display: inline-block;
+  width: auto !important;
+  text-align: left;
+  padding-left: 15rpx !important;
+  text-decoration: line-through;
+  vertical-align: text-bottom 
+}
+.vip_tips{
+  font-size: 18rpx !important;
+  color: #aeadad !important;
+  width:auto !important;
+  vertical-align: text-bottom 
+}
+.none {
+  width: 374rpx;
+  height: 334rpx;
+  margin: auto;
+  margin-top: 80rpx;
+}
+.none image {
+  width: 100%;
+  height: 100%;
+}

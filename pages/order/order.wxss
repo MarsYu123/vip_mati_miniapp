@@ -1,0 +1,238 @@
+/* pages/order/order.wxss */
+@import "../mould/call/call.wxss";
+.order {
+  padding: 0 34rpx;
+  height: 1334rpx;
+  overflow: hidden;
+}
+
+.nav {
+  margin: auto;
+  width: 628rpx;
+  height: 60rpx;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border: #1d829e solid 1px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: #ffffff;
+  font-size: 0;
+  margin-top: 30rpx;
+}
+
+.nav .item {
+  width: 209.3rpx;
+  height: 50rpx;
+  text-align: center;
+  border-left: 1px #1d829e solid;
+  font-size: 28rpx;
+  line-height: 50rpx;
+  box-sizing: border-box;
+  display: inline-block;
+  color: #1d829e;
+}
+
+.nav .item:first-child {
+  border-left: none;
+}
+
+.nav .item.active {
+  background: #1d829e;
+  color: #ffffff;
+  height: 60rpx;
+  line-height: 60rpx
+}
+.nav .item.active + .item{
+  border: none
+}
+.list {
+  position: absolute;
+  top: 120rpx;
+  left: 50%;
+  bottom: 50rpx;
+  transform: translateX(-50%);
+  overflow: hidden;
+  width: 670rpx;
+}
+.list.active{
+  top: 190rpx;
+}
+
+.all {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  padding-right: 22px;
+}
+.cont_item {
+  width: 100%;
+  background: #F6FBFD;
+}
+.cont_right {
+  /* background: #ffffff; */
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+.checked {
+  width: 600rpx;
+  margin-left: 30rpx;
+}
+/* 未选中的 背景样式 */
+
+checkbox .wx-checkbox-input {
+  border-radius: 50%;
+  /* 圆角 */
+  box-sizing: border-box;
+}
+
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  box-sizing: border-box;
+  background: #1d829e;
+  border: none;
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  color: #ffffff;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.item_head {
+  width: 100%;
+  border-bottom: 1px #edebeb solid;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+}
+
+.item_head text {
+  font-size: 24rpx;
+  line-height: 80rpx;
+}
+
+.num {
+  color: #1e4049;
+  /* flex: 2; */
+  /* padding-left: 40rpx; */
+}
+
+.status {
+  /* flex: 1; */
+  text-align: right;
+  padding-right: 20rpx;
+  color: #9B9B9B;
+  font-size: 30rpx;
+}
+.status.active{
+  color: #f75231
+}
+
+.item_card {
+  padding: 20rpx 40rpx;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.card_left,
+.card_right {
+  display: inline-block;
+  vertical-align: middle;
+  width: 258rpx;
+  height: 116rpx;
+}
+
+.card_left image {
+  width: 100%;
+  display: block;
+  margin: auto
+}
+
+.card_right {
+  width: 330rpx;
+  margin-left: 20rpx;
+  position: relative;
+}
+
+.card_right text {
+  color: #a4a9b3;
+  display: block;
+  font-size: 20rpx;
+  line-height: 38rpx
+}
+.refund{
+  position: absolute;
+  background: #4897AF;
+  width: 94rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  text-align: center;
+  right: 0;
+  bottom: 0;
+  color: #ffffff;
+  font-size: 20rpx;
+}
+.invoice {
+  width: 129rpx;
+  height: 129rpx;
+  position: absolute;
+  top: 60rpx;
+  left: 530rpx;
+}
+.invoice image {
+  width: 100%;
+  height: 100%;
+}
+.button {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 140rpx;
+  background: #ffffff;
+  text-align: center;
+}
+
+.start,
+.next {
+  width: 600rpx;
+  height: 90rpx;
+  color: #ffffff;
+  background: #1d829e;
+  font-size: 36rpx;
+  line-height: 90rpx;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.none {
+  width: 100%;
+  margin-top: 244rpx;
+}
+.none image {
+  width: 374rpx;
+  height: 334rpx;
+  display: block;
+  margin: auto;
+}
+.tips{
+  font-size: 24rpx;
+  text-align: center;
+  color: #b1b2b3;
+  margin: 20px 15px 
+}

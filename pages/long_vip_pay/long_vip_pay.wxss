@@ -1,0 +1,158 @@
+/* pages/long_vip_pay/long_vip_pay.wxss */
+page {
+    background: #f6fbfd;
+}
+
+.long_vip {
+    width: 100%;
+    height: 100%;
+    padding-right: 30rpx;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch
+}
+
+.long_vip_box {
+    width: 100%;
+    padding: 20rpx;
+    box-sizing: border-box;
+    margin-bottom: 100rpx;
+}
+
+.vip_kv {
+    position: relative;
+    padding: 0;
+    width: 710rpx;
+    background: transparent;
+    box-shadow: none
+}
+
+.join_tisp{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 228rpx;
+    height: 48rpx;
+    display: block
+}
+.long{
+    bottom: 94rpx
+}
+
+.vip_kv image {
+    width: 100%
+}
+
+.mt_ckeck {
+    position: absolute;
+    width: 662rpx;
+    top: 422rpx;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0
+}
+
+.mt_ckeck .check_item {
+    position: relative;
+    display: block
+}
+
+.check_item.active text {
+    display: block;
+    position: absolute;
+    width: 64rpx;
+    height: 56rpx;
+    position: absolute;
+    right: 3rpx;
+    bottom: 13rpx;
+    background: url("https://home.mati.hk/Public/web_image/long_vip/mt_vip.png");
+    background-size: 100% 100%
+}
+
+.kv_title {
+    font-size: 28rpx;
+    color: #06617A;
+    margin-bottom: 36rpx;
+    text-align: left;
+    font-weight: bold
+}
+
+.kv_title text:first-child {
+    display: inline-block;
+    vertical-align: middle;
+    width: 14rpx;
+    height: 14rpx;
+    background: #06617A;
+    transform: rotate(45deg);
+    margin-right: 20rpx
+}
+
+.vip_tips {
+    text-align: right;
+    font-size: 9px;
+    color: #9B9B9B;
+}
+
+.vip_tips text:first-child {
+    color: #E05449;
+    margin-right: 10rpx
+}
+
+.vip_tips text:last-child {
+    text-decoration: underline
+}
+
+.vip_msg {
+    width: 710rpx;
+    margin: auto;
+    margin-top: 20rpx;
+    position: relative;
+}
+
+.vip_msg image {
+    width: 100%;
+}
+
+.vip_tips_text {
+    position: absolute;
+    top: 28rpx;
+    right: 28rpx;
+    font-size: 18rpx;
+    color: #9B9B9B;
+    text-decoration: underline
+}
+
+.pay,.ios {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 100rpx;
+    box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, 0.07);
+    background: #ffffff;
+    line-height: 100rpx;
+    display: flex
+}
+.ios{
+    background: #4897AF;
+    color: #ffffff;
+    text-align: center;
+    display: block
+}
+.money {
+    width: 458rpx;
+    font-size: 16px;
+    color: #000F00;
+    padding-left: 40rpx;
+    display: flex;
+}
+
+.num {
+    color: #E62112;
+}
+
+.go_pay {
+    font-size: 18px;
+    color: #FFFFFF;
+    background: #E62112;
+    width: 292rpx;
+    text-align: center
+}

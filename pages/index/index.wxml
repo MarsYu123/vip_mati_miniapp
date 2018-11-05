@@ -1,0 +1,135 @@
+<!-- index.wxml -->
+<import src='../mould/call/call.wxml'></import>
+<view class="index">
+  <view class="home">
+    <view class="container">
+      <!-- 首页头部 -->
+      <view class="home_head">
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{wx_tx}}" mode="cover"></image>
+        <view class="userinfo">
+          <block wx:if="{{user_bind}}">
+            <view class="user_name">
+              <text class="userinfo-nickname">{{user_msg.nickname}}</text>
+              <image class="user_sex" src="https://home.mati.hk/Public/web_image/index/sex{{user_msg.gender}}.png" />
+            </view>
+            <view class="user_bottom">
+              <text class="user_job">{{user_msg.province}}{{user_msg.city}}</text>
+              <block wx:if="{{user_msg.isFinalVIp}}">
+                <text class="icon1 active"></text>
+                <text class="icon2 active"></text>
+                <text class="icon3 active"></text>
+              </block>
+              <block wx:else>
+                <text class="icon1"></text>
+                <text class="icon2 {{user_msg.EduVIp != ''? 'active':''}}"></text>
+                <text class="icon3 {{user_msg.MatiVip !=''?'active':''}}"></text>
+              </block>
+            </view>
+
+            <view class="user_edit" bindtap="user_edit">
+              <image src="https://home.mati.hk/Public/web_image/index/bianji_button.png" />
+            </view>
+          </block>
+          <!-- 登录提示 -->
+          <block wx:if="{{!hasUserInfo}}">
+            <button class="login" open-type="getUserInfo" bindgetuserinfo="getUserInfo_user" id="user">
+              登陆/注册
+            </button>
+            <text class="login_text">登陆后可查看个人信息</text>
+          </block>
+          <block wx:elif="{{!user_bind}}">
+            <button class="login" bindtap="user_enter" id="user">
+              登陆/注册
+            </button>
+            <text class="login_text">登陆后可查看个人信息</text>
+          </block>
+
+          <!-- </view> -->
+        </view>
+      </view>
+    </view>
+    <!-- 首页卡片 -->
+    <view class="home_content">
+      <!--  <view class="home_card">
+        <view class="card_num">
+          <view class="card_num_left">
+            <image src="https://home.mati.hk/Public/web_image/index/no.png" />
+            <text wx:if="{{user_msg.phone_number}}">{{user_msg.phone_number}}</text>
+            <text wx:else>登陆后显示卡号</text>
+          </view>
+          <view class="card_shop_tips">
+            <image src="https://home.mati.hk/Public/web_image/index/shop_tip.png?a=14" />
+          </view>
+        </view>
+        <view class="card_ci">
+          <view class="card_left">
+            <view class="card_top">
+              我的可兑课程次数
+              <text wx:if="{{user_msg.cardCount}}" class="card_bottom">{{user_msg.cardCount}}</text>
+              <text wx:else class="card_bottom">0</text>
+            </view>
+          </view>
+          <view class="card_right">
+            <button class="card_right_shop" wx:if="{{!hasUserInfo}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo_pay" id="pay">
+              购买
+            </button>
+            <view class="card_right_shop" wx:else bindtap="shop_card">购买</view>
+          </view>
+        </view>
+      </view> -->
+
+      <!-- 是否显示试听券
+      <view class="free_voucher" wx:if="{{user_msg.free_ticket}}" bindtap="free_voucher">
+        <image src="https://home.mati.hk/Public/web_image/index/free.png?date={{time}}" mode="widthFix"/>
+      </view> -->
+
+
+      <!-- 登陆后显示 -->
+      <view class="home_button">
+        <view class="course" bindtap="my_vip">
+          <image src="https://home.mati.hk/Public/web_image/index/hyzx_button.png?date={{time}}" />
+          <text>会员中心</text>
+          <!-- 会员中心 -->
+        </view>
+        <view class="course" bindtap="order">
+          <image src="https://home.mati.hk/Public/web_image/index/dingdan_button.png" />
+          <text>我的订单</text>
+          <!-- 订单 -->
+        </view>
+
+
+      </view>
+      <view class="home_button">
+        <view class="course" bindtap="course">
+          <image src="https://home.mati.hk/Public/web_image/index/ckkc_button.png?date={{time}}" />
+          <text>马蹄课程</text>
+          <!-- 查看课程 -->
+        </view>
+        <view class="course" bindtap="purchased">
+          <image src="https://home.mati.hk/Public/web_image/index/ygkc_button.png?date={{time}}" />
+          <text>学习记录</text>
+          <!-- 已购课程 -->
+        </view>
+      </view>
+      <view class="home_button">
+        <!-- <view class="course" bindtap="help">
+          <image src="https://home.mati.hk/Public/web_image/index/help_button.png" />
+          <text>帮助中心</text>
+        </view> -->
+        <view class="course" bindtap="share">
+          <image src="https://home.mati.hk/Public/web_image/index/share_button.png" />
+          <button class="share" open-type="share" bindtap="share"></button>
+          <text>分享小程序</text>
+          <!-- 分享 -->
+        </view>
+      </view>
+
+      <!-- 未购买学习卡提示 -->
+    </view>
+    <view class="foot">
+      <image src="https://home.mati.hk/Public/web_image/index/logo.png" />
+    </view>
+    <template is='call_btn'></template>
+  </view>
+</view>
+<!-- 首页 -->

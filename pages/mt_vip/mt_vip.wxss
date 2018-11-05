@@ -1,0 +1,23 @@
+/* pages/mt_vip/mt_vip.wxss */
+@import '../long_vip_pay/long_vip_pay.wxss';
+
+.vip_kv {
+    position: relative;
+    padding: 0;
+    width: 710rpx;
+    background: transparent;
+    box-shadow: none
+}
+
+.vip_kv image {
+    width: 100%
+}
+.one{
+    bottom: 94rpx
+}
+.vip_tips {
+    position: absolute;
+    right: 30rpx;
+    bottom: 30rpx;
+
+}

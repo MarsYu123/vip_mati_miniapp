@@ -1,0 +1,14 @@
+<!--pages/teacher/teacher.wxml-->
+<view class="teacher">
+    <view class="box">
+        <view class="head">
+            <image src="{{title}}" mode="widthFix" />
+        </view>
+        <view class="list">
+            <view class="item" wx:for="{{teacher_msg}}">
+                <image src="{{item.teacher_img}}" mode="widthFix" />
+                <image src="{{item.content_img}}" mode="widthFix" id="{{index}}" />
+            </view>
+        </view>
+    </view>
+</view>

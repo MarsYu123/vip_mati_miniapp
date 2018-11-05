@@ -1,0 +1,7 @@
+/* pages/video_vip_pay/video_vip_pay.wxss */
+@import '../long_vip_pay/long_vip_pay.wxss';
+
+.one{
+    bottom: 92rpx;
+    transform: translateX()
+}

@@ -1,0 +1,83 @@
+<!-- pages/order/order.wxml -->
+<import src="../mould/call/call.wxml"></import>
+<view class="order">
+    <view class="nav">
+        <text wx:for="{{nav}}" class="item  {{class == index?'active':''}}" bindtap="nav_click" data-id="{{index}}">{{nav[index].title}}</text>
+    </view>
+    <view class="list" wx:if="{{flag}}">
+        <view class="all">
+
+            <checkbox-group class="checkbox" bindchange="checkbox">
+                <view class="cont_item" wx:for="{{msg}}">
+                    <view class="cont_right">
+                        <view class="item_head">
+                            <text class="num">订单编号：{{item.out_trade_no}}</text>
+                            <block wx:if="{{item.order_kind =='0' || item.order_kind =='2' || item.order_kind =='4' || item.order_kind =='5' || item.order_kind =='6'}}">
+                                <text class="status {{item.pay_status !=0 ? 'active':''}}">{{item.pay_status !=0?'已支付':'已取消'}}</text>
+                            </block>
+                            <block wx:if="{{item.order_kind =='1'}}">
+                                <text class="status {{item.pay_status !=0 ? 'active':''}}">{{item.pay_status !=0?'交易成功':'交易失败'}}</text>
+                            </block>
+                            <block wx:if="{{item.order_kind =='3'}}">
+                                <block wx:if="{{item.pay_status == 0}}">
+                                    <text class="status">未支付</text>
+                                </block>
+                                <block wx:if="{{item.pay_status == 1}}">
+                                    <text class="status active">已支付</text>
+                                </block>
+                                <block wx:if="{{item.pay_status == 4}}">
+                                    <text class="status active">申请退款中</text>
+                                </block>
+                                <block wx:if="{{item.pay_status == 5}}">
+                                    <text class="status active">成功退款</text>
+                                </block>
+                            </block>
+                            <block wx:if="{{item.order_kind =='7' || item.order_kind =='8'}}">
+                                <block wx:if="{{item.pay_status == 0}}">
+                                    <text class="status">未支付</text>
+                                </block>
+                                <block wx:if="{{item.pay_status == 1}}">
+                                    <text class="status active">已支付</text>
+                                </block>
+                            </block>
+                            
+                        </view>
+                        <view class="item_card">
+                            <view class="card_left">
+                            <block wx:if="{{item.order_kind == '0' || item.order_kind == '3' || item.order_kind == '7' || item.order_kind == '8'}}">
+                                <image src="https://home.mati.hk/Public/web_image/order/vip.png" mode="widthFix" />
+                            </block>
+                            <block wx:elif="{{item.order_kind == '1'}}">
+                                <image src="https://home.mati.hk/Public{{item.cover}}" mode="widthFix" />
+                            </block>
+                            <block wx:elif="{{item.order_kind == '2'}}">
+                                <image src="https://home.mati.hk/Public/web_image/order/video.png" mode="widthFix" />
+                            </block>
+                            <block wx:elif="{{item.order_kind == '4' || item.order_kind == '5' || item.order_kind == '6'}}">
+                                <image src="https://home.mati.hk/Public/web_image/order/mt_vip.png" mode="widthFix"/>
+                            </block>
+                            </view>
+                            <view class="card_right">
+                                <text class="card_name">交易物品: {{item.description}}</text>
+                                <text class="card_time">交易时间: {{item.order_time}}</text>
+                                <text class="card_money">金额：￥{{item.total_fee}}</text>
+
+                                <!-- 退款 -->
+                                <block wx:if="{{item.pay_status == 1 && is_refund && item.order_kind == 3}}">
+                                    <view class="refund" bindtap="refund" data-trade="{{item.out_trade_no}}" data-fee="{{item.total_fee}}">退款</view>
+                                </block>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </checkbox-group>
+
+        </view>
+    </view>
+
+    <view class="none" wx:else>
+        <image src="https://home.mati.hk/Public/web_image/order/none.png?time=111" />
+    </view>
+
+    <template is="call_btn"></template>
+</view>

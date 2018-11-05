@@ -1,0 +1,35 @@
+<!--pages/user_vip/user_vip.wxml-->
+<view class="user_vip">
+    <swiper indicator-dots="{{true}}" autoplay="{{false}}" interval="{{5000}}" duration="{{500}}" indicator-color="#C7C7C7"
+        indicator-active-color="#595959">
+        <block wx:for="{{[1,2,3]}}">
+            <swiper-item>
+                <view class="item">
+                    <block wx:if="{{!is_ios}}">
+                        <image class="item_head" src="https://home.mati.hk/Public/web_image/index/vip_head_{{img[item-1]}}.png?time={{h}}2"
+                            mode="widthFix" bindtap="go_vip_pay" data-id="{{item}}" />
+                    </block>
+                    <block wx:else>
+                        <image class="item_head" src="https://home.mati.hk/Public/web_image/index/vip_head_{{img[item-1]}}_ios.png?time={{h}}2"
+                            mode="widthFix" bindtap="go_vip_pay" data-id="{{item}}" />
+                    </block>
+                    <button wx:if="{{!hasUserInfo}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo_user"></button>
+                    <text class="tips">
+                        {{text[item-1]}}
+                    </text>
+                    <block wx:if="{{!is_ios}}">
+                        <image class="item_body" src="https://home.mati.hk/Public/web_image/index/vip_{{item}}.png?time={{h}}2"
+                            mode="widthFix" />
+                    </block>
+                    <block wx:else>
+                        <image class="item_body" src="https://home.mati.hk/Public/web_image/index/vip_{{item}}_ios.png?time={{h}}2"
+                        mode="widthFix" />
+                    </block>
+                </view>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="mb"></view>
+    <image class="mb1" src="https://home.mati.hk/Public/web_image/index/mb1.png" mode="widthFix" />
+    <view class="bg"></view>
+</view>

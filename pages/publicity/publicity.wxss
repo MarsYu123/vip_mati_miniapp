@@ -1,0 +1,33 @@
+/* pages/publicity/publicity.wxss */
+.publicity{
+    overflow: auto;
+    padding-right: 30rpx;
+    width: 100%;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+    background: #1d829e
+}
+.img{
+    width: 100%;
+    font-size: 0;
+    position: relative;
+}
+.img>image{
+    width: 100%;
+}
+.img swiper{
+    position: absolute;
+    padding: 0 20rpx;
+    top:430rpx;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    height:320rpx;
+}
+swiper-item{
+    text-align: center
+}
+.swiper-image{
+    width: 480rpx
+}

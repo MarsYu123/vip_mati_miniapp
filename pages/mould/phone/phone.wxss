@@ -1,0 +1,102 @@
+/* pages/mould/phone/phone.wxss */
+button::after{
+  border: none
+}
+.phone,
+.check_code,.password_box {
+  margin: 0 85rpx;
+  background: #fff;
+  font-size: 30rpx;
+  color: #000;
+  overflow: hidden;
+  line-height: 95rpx;
+  position: relative;
+}
+
+.phone_box {
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  border-bottom: solid 1px #edebeb;
+  text-align: left;
+}
+
+.phone_text {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.phone_num,
+.password {
+  display: inline-block;
+  vertical-align: bottom;
+  font-size: 30rpx;
+  line-height: 95rpx;
+  width: 500rpx;
+  height: 95rpx;
+  margin-left: 20rpx;
+}
+.check_code .phone_num{
+  width: 300rpx
+}
+.get_msg {
+  margin: 20rpx auto;
+  width: 170rpx;
+  height: 50rpx;
+  border: 1px #000 solid;
+  color: #000;
+  font-size: 24rpx;
+  margin: 0;
+  background: transparent;
+  position: absolute;
+  top: 28rpx;
+  right: 16rpx;
+  line-height: 50rpx;
+  padding: 0;
+  z-index: 100;
+}
+.get_msg[disabled]:not([type]){
+  border: #F7F7F7;
+  border-radius:2px;
+}
+
+.check_code .phone_box{
+  border: none
+}
+.password_box .phone_box{
+  /* border-bottom: none; */
+  border-top: solid 1px #edebeb;
+}
+button{
+  border-radius: 2px;
+}
+.phone_up{
+  width: 568rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  margin: auto;
+  background: #1d829e;
+  color: #fff;
+  border: none;
+  margin-top: 80rpx;
+  position: relative;
+}
+.phone_up[disabled]:not([type]){
+  border: none;
+  border-radius: 1px;
+}
+.input_msg{
+  font-size: 30rpx;
+  color: #aeadad;
+}
+.login_tips{
+  width: 565rpx;
+  height: 112rpx;
+  position: absolute;
+  bottom: 360rpx;
+  left: 50%;
+  transform: translateX(-50%)
+}
+.login_tips image{
+  width: 100%;
+  height: 100%;
+}

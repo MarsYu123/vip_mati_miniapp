@@ -1,0 +1,98 @@
+<!-- pages/course_item/course_item.wxml -->
+<import src="../mould/call/call.wxml"></import>
+<view class="list">
+    <view class="course_item">
+        <view class="kv">
+            <view class="title">{{course_msg.course_name}}</view>
+            <view class="cover">
+                <image src="{{course_msg.cover}}" mode="widthFix" />
+            </view>
+            <view class="kv_bottom" wx:if="{{online_flag == '0'}}" wx:if="{{!is_ios}}">
+                <view class="price">
+                    ￥
+                    <view class="new_price">{{course_msg.now_price}}</view>
+                    <view class="old_price" wx:if="{{course_msg.old_price != ''}}">￥{{course_msg.old_price}}</view>
+                </view>
+                <view class="time">{{course_msg.outlets_title}}</view>
+            </view>
+        </view>
+        <view class="course_msg">
+            <view class="msg_title">
+                <text class="title_h1">课程简介</text>
+                <text class="title_h2">基本信息一览</text>
+            </view>
+            <view class="msg_list">
+                <view class="msg_item">
+                    <text class="item_head">开课时间</text>
+                    <text class="item_content">{{course_msg.start_time}}</text>
+                </view>
+                <view class="msg_item">
+                    <text class="item_head">上课地点</text>
+                    <text class="item_content">{{course_msg.address}}</text>
+                </view>
+                <view class="msg_item">
+                    <text class="item_head">结业证书</text>
+                    <text class="item_content">{{course_msg.graduation_certificate}}</text>
+                </view>
+                <view class="msg_item">
+                    <text class="item_head">适合人群</text>
+                    <text class="item_content">{{course_msg.suit_croeds}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="teacher">
+            <view class="table_title">
+                <text class="title_h1">授课导师</text>
+                <text class="title_h2">大咖设计师专业授课，圈子化互动教学</text>
+            </view>
+            <view class="teacher_list">
+                <view class="teacher_item" wx:for="{{course_msg.teacher}}" bindtap="open_view" data-id="{{item.id}}">
+                    <image src="{{item.teacher_profile}}" />
+                    <view class="item_name">
+                        <text class="name">{{item.name}}</text>
+                        <text class="arrow"></text>
+                    </view>
+                    <view class="item_job">
+                        <text>{{item.title}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="table">
+            <view class="table_title">
+                <text class="title_h1">课程表</text>
+                <!-- <text class="title_h2">精心打造的教学提纲</text> -->
+            </view>
+            <view class="table_msg">
+                <image mode="widthFix" bindtap="showimg" src="{{course_msg.class_schedule}}" />
+            </view>
+        </view>
+    </view>
+    <block wx:if="{{online_flag == '0'}}">
+        <block wx:if="{{!is_ios}}">
+            <view class="shop">
+                <block wx:if="{{hasUserInfo}}">
+                    <block wx:if="{{!is_vip}}">
+                        <view class="know" bindtap="once" wx:if="{{hasUserInfo}}">立即购买</view>
+                    </block>
+                    <block wx:else>
+                        <view class="buy" bindtap="buy" wx:if="{{hasUserInfo}}">立即报名</view>
+                    </block>
+                </block>
+                <block wx:else>
+                    <button class="buy" wx:if="{{!hasUserInfo}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo_user"
+                        id="user">
+                        登陆后购买
+                    </button>
+                </block>
+            </view>
+        </block>
+        <block wx:else>
+            <button class="buy" open-type="contact">了解详情</button>
+        </block>
+    </block>
+    <block wx:else>
+        <view class="off_line">课程已下线</view>
+    </block>
+    <template is="call_btn"></template>
+</view>

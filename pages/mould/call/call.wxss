@@ -1,0 +1,32 @@
+/* pages/mould/call/call.wxss */
+movable-area{
+    position: fixed;
+    bottom: 10%;
+    right: 0;
+    width: 40rpx;
+    height: 500rpx;
+}
+.call_btn{
+    width: 108rpx;
+    height: 108rpx;
+    position: relative;
+    padding: 0 !important;
+    margin: 0 !important
+}
+.call_btn image{
+    width: 100%;
+    height: 100%;
+}
+.call_btn button{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 !important
+}
+.call_btn view{
+    width: 100%;
+    height: 100%;
+}

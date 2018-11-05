@@ -1,0 +1,113 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.2.4",
+	"appid": "wx5b81d3177b12c31a",
+	"projectname": "%E5%AD%A6%E4%B9%A0%E5%8D%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 11,
+			"list": [
+				{
+					"id": 0,
+					"name": "long_vip",
+					"pathName": "pages/vip_tips/vip_tips",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "edit",
+					"pathName": "pages/user_edit/user_edit",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "course",
+					"pathName": "pages/course/course",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "course_item",
+					"pathName": "pages/course_item/course_item",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "order",
+					"pathName": "pages/order/order",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "my",
+					"pathName": "pages/my_courses/my_courses",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "单次购买",
+					"pathName": "pages/one_play/one_play",
+					"query": ""
+				},
+				{
+					"id": 20,
+					"name": "user_vip",
+					"pathName": "pages/user_vip/user_vip",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "double_eleven",
+					"pathName": "pages/double_eleven/double_eleven",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "模拟更新",
+					"pathName": "pages/vip/vip",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "publicity",
+					"pathName": "pages/publicity/publicity",
+					"query": ""
+				},
+				{
+					"id": 11,
+					"name": "login",
+					"pathName": "pages/login/login",
+					"query": ""
+				}
+			]
+		}
+	}
+}

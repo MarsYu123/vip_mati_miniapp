@@ -1,0 +1,32 @@
+<!--pages/long_vip_pay/long_vip_pay.wxml-->
+<view class="long_vip">
+    <view class="long_vip_box">
+        <view class="vip_kv">
+            <image src="https://home.mati.hk/Public/web_image/long_vip/long_kv.png?time=2" mode="widthFix" wx:if="{{!is_ios}}" />
+            <image src="https://home.mati.hk/Public/web_image/long_vip/long_kv_ios.png?time=2" mode="widthFix" wx:else />
+        </view>
+        <view class="vip_msg">
+            <image src="https://home.mati.hk/Public/web_image/long_vip/long_msg.png?time=2" mode="widthFix" wx:if="{{!is_ios}}" />
+            <image src="https://home.mati.hk/Public/web_image/long_vip/long_msg_ios.png?time=2" mode="widthFix" wx:else />
+            <text class="join_tisp long" bindtap="long_tips"></text>
+        </view>
+    </view>
+    <block wx:if="{{!is_ios}}">
+        <view class="pay">
+            <view class="money">
+                总价<view class="num">￥{{new_money}}</view>
+            </view>
+            <block wx:if="{{!hasUserInfo}}">
+                <button class="go_pay" open-type="getUserInfo" bindgetuserinfo="getUserInfo_user" id="user">
+                    确认支付
+                </button>
+            </block>
+            <block wx:elif="{{hasUserInfo}}">
+                <view class="go_pay" bindtap="go_pay">
+                    确认支付
+                </view>
+            </block>
+        </view>
+    </block>
+    <button class="ios" wx:else open-type="contact">了解详情</button>
+</view>

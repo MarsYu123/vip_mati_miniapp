@@ -1,0 +1,63 @@
+{
+  "pages": [
+    "pages/vip/vip",
+    "pages/home/home",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/pay/pay",
+    "pages/mould/phone/phone",
+    "pages/login/login",
+    "pages/mould/accredit/accredit",
+    "pages/user_edit/user_edit",
+    "pages/course/course",
+    "pages/course_item/course_item",
+    "pages/order/order",
+    "pages/my_courses/my_courses",
+    "pages/mould/call/call",
+    "pages/web_view/web_view",
+    "pages/mould/card_list/card_list",
+    "pages/publicity/publicity",
+    "pages/teacher/teacher",
+    "pages/long_vip_pay/long_vip_pay",
+    "pages/video_vip_pay/video_vip_pay",
+    "pages/mt_vip/mt_vip",
+    "pages/user_vip/user_vip",
+    "pages/join_pay/join_pay",
+    "pages/vip_tips/vip_tips",
+    "pages/double_eleven/double_eleven"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "马蹄家",
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#ffffff",
+    "backgroundColorTop": "#ffffff",
+    "disableScroll": true
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#1e7d97",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/vip/vip",
+        "text": "首页",
+        "iconPath": "utils/img/home.png",
+        "selectedIconPath": "utils/img/home_active.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "课程",
+        "iconPath": "utils/img/course.png",
+        "selectedIconPath": "utils/img/course_active.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "个人",
+        "iconPath": "utils/img/user.png",
+        "selectedIconPath": "utils/img/user_active.png"
+      }
+    ]
+  }
+}

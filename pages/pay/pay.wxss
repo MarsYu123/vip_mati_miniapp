@@ -1,0 +1,327 @@
+/* pages/pay/pay.wxss */
+
+@import '../mould/call/call.wxss';
+page {
+  background: #f4fafc;
+  overflow: hidden;
+  position: relative;
+}
+
+.pay_box {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-right: 30rpx;
+}
+
+.pay_card {
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.card_img {
+  width: 100%;
+  margin: 20rpx auto;
+  position: relative;
+}
+
+.card_img image {
+  width: 578rpx;
+  height: 354rpx;
+  display: block;
+  margin: auto;
+}
+
+.card_num {
+  position: absolute;
+  font-size: 18rpx;
+  color: #000000;
+  bottom: 20rpx;
+  right: 120rpx;
+}
+
+.card_index {
+  width: 580rpx;
+  height: 80rpx;
+  margin: auto;
+  border: 1px #1d829e solid;
+  border-radius: 5px;
+  margin-bottom: 35rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.card_index_text {
+  display: inline-block;
+  width: 278rpx;
+  height: 100%;
+  line-height: 80rpx;
+  margin-left: 40rpx;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 30rpx;
+}
+
+.card_check {
+  display: inline-block;
+  height: 100%;
+  width: 260rpx;
+  overflow: hidden;
+  vertical-align: middle;
+  background: #eef9fc;
+}
+
+.card_check text,
+.card_check view {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  line-height: 80rpx;
+  /* background: #eef9fc; */
+  color: #1d829e;
+}
+
+.num {
+  width: 57rpx;
+  text-align: center;
+  font-size: 30rpx;
+}
+
+.subtract,
+.add {
+  width: 100rpx;
+  position: relative;
+}
+
+.subtract::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 30rpx;
+  height: 5rpx;
+  background: #1d829e;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.add::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 30rpx;
+  height: 5rpx;
+  background: #1d829e;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.add::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 30rpx;
+  height: 5rpx;
+  background: #1d829e;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.card_msg {
+  background: #ffffff;
+  margin: 20rpx auto;
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: 250rpx
+}
+
+.card_title {
+  margin: 20rpx 34rpx;
+  padding-top: 15rpx;
+  padding-bottom: 20rpx;
+  border-bottom: #edebeb 1px solid;
+  overflow: hidden;
+  position: relative;
+}
+
+.card_h1 {
+  font-size: 32rpx;
+  display: block;
+  font-weight: bold;
+  line-height: 40rpx;
+  position: relative;
+}
+
+.card_h1 image {
+  width: 32rpx;
+  height: 32rpx;
+  position: absolute;
+  top: 8rpx;
+  right: 0rpx;
+}
+
+.card_h2 {
+  font-size: 22rpx;
+  color: #aeadad;
+}
+
+.msg_list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0 85rpx;
+}
+
+.msg_item {
+  width: 50%;
+  padding: 20rpx 0
+}
+
+.msg_item image {
+  width: 160rpx;
+  height: 140rpx;
+}
+
+.open_all{
+  width: 225rpx;
+  height: 60rpx;
+  margin: auto;
+  border: #1d829e 1px solid;
+  border-radius: 5px;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 0;
+  margin-bottom: 20rpx
+}
+.text{
+  color: #1d829e;
+  font-size: 24rpx;
+  display: inline-block;
+  vertical-align: middle
+}
+.arrow{
+  vertical-align:middle;
+display:inline-block;
+width:18rpx;
+height:18rpx;
+border-right:1rpx #1d829e solid;
+border-bottom:1rpx #1d829e solid;
+transform:rotate(-45deg);
+margin-left:5px;
+
+}
+.pay_sum {
+  background: #ffffff;
+  padding: 20rpx 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%
+}
+
+.money,
+.money_tip {
+  display: block;
+  color: #f02929;
+  font-size: 48rpx;
+  text-align: center;
+  line-height: 56rpx;
+  font-weight: bold;
+}
+
+.money_tip {
+  font-size: 22rpx;
+  color: #5d5c5c;
+  font-weight: 400;
+}
+
+.pay_sum button {
+  width: 595rpx;
+  height: 84rpx;
+  background: #1d829e;
+  color: #ffffff;
+  font-size: 36rpx;
+  text-align: center;
+  line-height: 84rpx;
+}
+
+.pay_sum button::after {
+  display: none;
+}
+
+/* 弹窗 */
+
+.button_card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.button_mask {
+  background: #eee;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+}
+
+.button_center {
+  position: absolute;
+  width: 100%;
+  height: 600rpx;
+  bottom: 0;
+  background: #ffffff;
+}
+
+.button_center image {
+  width: 235rpx;
+  height: 159rpx;
+  display: block;
+  margin: 60rpx auto;
+}
+
+.button_center text {
+  text-align: center;
+  font-size: 32rpx;
+  font-weight: bold;
+  display: block;
+}
+
+.button {
+  display: flex;
+  justify-content: space-between;
+  width: 560rpx;
+  margin: auto;
+  text-align: center;
+  margin-top: 80rpx;
+}
+
+.button view {
+  width: 245rpx;
+  height: 90rpx;
+  border: 1px solid #1d829e;
+  border-radius: 5px;
+  line-height: 90rpx;
+  font-size: 36rpx;
+}
+
+.call {
+  background: #1d829e;
+  color: #ffffff;
+  position: relative;
+}
+
+.call button {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}

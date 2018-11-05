@@ -1,0 +1,103 @@
+/* pages/user_vip/user_vip.wxss */
+
+.user_vip {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+swiper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+.bg{
+    width: 100%;
+    top: 372rpx;
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    background: #f4fafc
+}
+
+swiper .wx-swiper-dots.wx-swiper-dots-horizontal {
+    position: absolute;
+    top: 330rpx;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+swiper .wx-swiper-dot{
+    width: 14rpx;
+    height: 14rpx;
+    background: #C7C7C7
+}
+
+swiper .wx-swiper-dot-active::before{
+    background: #595959
+}
+
+swiper swiper-item {
+    width: 100%;
+    height: 100%;
+}
+
+.item {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.item_body,
+.item_head {
+
+    position: absolute;
+}
+
+.item_body {
+    left: 0;
+    top: 372rpx;
+    width: 100%;
+}
+
+.item_head {
+    width: 646rpx;
+    top: 50rpx;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.tips {
+    font-size: 28rpx;
+    position: absolute;
+    top: 222rpx;
+    left: 220rpx;
+
+}
+
+.mb {
+    width: 100%;
+    height: 916rpx;
+    top: 300rpx;
+    left: 0;
+    position: absolute;
+    z-index: 5;
+}
+.mb1{
+    width: 100%;
+    position: absolute;
+    z-index: 5;
+    top: 304rpx;
+    left: 0;
+}
+button{
+    position: absolute;
+    width: 646rpx;
+    height: 185px;
+    top: 50rpx;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    opacity: 0;
+}

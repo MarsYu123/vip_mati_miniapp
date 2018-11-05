@@ -1,0 +1,276 @@
+/* pages/vip/vip.wxss */
+page {
+    background: #F6FBFD;
+    overflow: hidden;
+}
+
+button {
+    padding: 0;
+    margin: 0
+}
+
+.vip {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-right: 20rpx;
+}
+
+.banner image {
+    width: 100%;
+}
+
+.banner swiper {
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.img {
+    font-size: 0
+}
+
+.img image {
+    width: 100%;
+}
+
+.time_out {
+    width: 100%;
+    height: 62rpx;
+    padding-left: 40rpx;
+    display: flex;
+    align-items: center;
+    background: #FFFFFF
+}
+
+.spell {
+    display: flex;
+    align-items: center
+}
+
+.spell .icon {
+    background: url("https://home.mati.hk/Public/web_image/vip/ren.png") no-repeat;
+    background-size: 100% 100%;
+    width: 38rpx;
+    height: 28rpx;
+    display: block;
+    margin-right: 10rpx
+}
+
+.spell .spell_text {
+    font-size: 28rpx;
+    color: #E62112;
+    margin-right: 30rpx;
+    display: block
+}
+
+.spell .spell_num {
+    background: url("https://home.mati.hk/Public/web_image/vip/num.png") no-repeat;
+    background-size: 100% 100%;
+    width: 182rpx;
+    height: 54rpx;
+    position: relative;
+    display: block
+}
+
+.spell .spell_max {
+    display: block;
+    font-size: 38rpx;
+    color: #FFFFFF;
+    position: absolute;
+    left: 29rpx;
+    top: -1rpx;
+    text-align: center;
+    width: 75rpx;
+}
+
+.spell .spell_min {
+    display: block;
+    font-size: 22rpx;
+    color: #FFFFFF;
+    position: absolute;
+    left: 107rpx;
+    top: 9rpx;
+}
+
+.time {
+    margin-left: 34rpx;
+    display: flex;
+    align-items: center;
+    font-size: 18rpx;
+}
+
+.time text {
+    display: block;
+}
+
+.time_b {
+    font-size: 26rpx;
+    color: #000000;
+    margin-right: 10rpx;
+}
+
+.time_m {
+    font-size: 24rpx;
+    color: #ffffff;
+    margin-right: 10rpx;
+    background: #1E1E1E;
+    border-radius: 2px;
+    padding: 0 5rpx;
+    height: 32rpx;
+    line-height: 32rpx
+}
+
+.hour,
+.min,
+.sec {
+    width: 32rpx;
+    height: 32rpx;
+    line-height: 32rpx;
+    text-align: center;
+    background: #1E1E1E;
+    border-radius: 2px;
+    font-size: 18rpx;
+    color: #FFFFFF;
+    margin: 0 5rpx
+}
+
+.vip_spell {
+    width: 100%;
+    background: #F6FBFD;
+    overflow: hidden;
+    position: relative;
+}
+
+.vip_spell image {
+    width: 636rpx;
+    height: 174rpx;
+    display: block;
+    margin: auto;
+    margin-top: 40rpx;
+    margin-bottom: 20rpx
+}
+
+.vip_spell .btn {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.activity {
+    margin: 0 20rpx;
+    background: #F6FBFD;
+}
+
+.act_item {
+    width: 100%;
+    height: 270rpx;
+    margin-bottom: 20rpx;
+    display: flex;
+    align-items: center;
+    padding: 46rpx;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.act_item image {
+    width: 172rpx;
+    height: 172rpx;
+    display: block;
+    margin-right: 40rpx
+}
+
+.item_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 410rpx;
+    height: 100%;
+    overflow: hidden;
+}
+
+.item_right .title {
+    font-size: 32rpx;
+    color: #000000;
+    margin-bottom: 14rpx
+}
+
+.cont text {
+    display: block
+}
+
+.item_right .msg {
+    font-size: 24rpx;
+    color: #000000;
+}
+
+.item_right .tips {
+    font-size: 18rpx;
+    color: #898989;
+    margin-top: 10rpx
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    align-items: flex-start;
+    height: 70rpx;
+}
+
+.kd.money text {
+    display: inline-block
+}
+
+
+.money {
+    font-size: 28rpx;
+    color: #E62112;
+}
+
+.money.kd {
+    font-size: 0
+}
+
+.kd text:first-child {
+    font-size: 28rpx
+}
+
+.money text {
+    display: block
+}
+.is_vip{
+    font-size: 20rpx;
+    color: #898989;
+}
+
+.money_old {
+    font-size: 9px;
+    color: #898989;
+    text-decoration: line-through;
+    margin-left: 14rpx
+}
+
+.btn_pay {
+    width: 144rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    background: #E62112;
+    font-size: 32rpx;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+    border-radius: 2px;
+    flex-shrink: 0;
+
+}
+.btn_pay.ios{
+    width: 160rpx;
+    font-size: 30rpx
+}

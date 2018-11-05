@@ -1,0 +1,4 @@
+<!--pages/double_eleven/double_eleven.wxml-->
+<view class="double_eleven">
+    <image wx:for="{{[1,2,3,4,5]}}" src="https://home.mati.hk/Public/web_image/vip_tips/double_0{{item}}.png?time={{h}}123" mode="widthFix"/>
+</view>

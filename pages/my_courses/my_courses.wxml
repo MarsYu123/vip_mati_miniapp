@@ -1,0 +1,41 @@
+<!-- pages/my_courses/my_courses.wxml -->
+<view class="my_courses">
+    <view class="content">
+
+        <block wx:if="{{flag}}">
+            <view class="cont">
+                <view class="item" wx:for="{{msg}}">
+                    <view class="title_time">
+                        {{item.type}}时间：2018-09-10 15:12
+                    </view>
+                    <view class="item_msg">
+                        <view class="item_left">
+                            <image src="https://home.mati.hk/Public{{item.cover}}" />
+                        </view>
+                        <view class="item_right">
+                            <view class="title">
+                                {{item.course_name}}
+                            </view>
+
+                            <view class="item_h">
+                                <text class="item_head">课程时间：</text>
+                                <text class="item_body">{{item.course_time}}</text>
+                            </view>
+
+                            <view class="item_h">
+                                <text class="item_head">{{item.type}}方式：</text>
+                                <text class="item_body">{{item.status}}</text>
+                            </view>
+
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+    <view class="none" wx:if="{{!flag}}">
+        <image src="https://home.mati.hk/Public/web_image/my_courses/none.png?time=111" />
+    </view>
+    <import src="../mould/call/call.wxml"></import>
+    <template is="call_btn"></template>
+</view>

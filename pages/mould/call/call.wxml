@@ -1,0 +1,11 @@
+<!-- pages/mould/call/call.wxml -->
+<template name="call_btn">
+    <movable-area>
+        <movable-view direction="vertical" inertia = true class="call_btn" x='-80rpx' y='400rpx'>
+            <view >
+                <image src="https://home.mati.hk/Public/web_image/call/call.png" />
+                <button open-type="contact"></button>
+            </view>
+        </movable-view>
+    </movable-area>
+</template>

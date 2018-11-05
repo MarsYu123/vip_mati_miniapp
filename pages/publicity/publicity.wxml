@@ -1,0 +1,37 @@
+<!--pages/publicity/publicity.wxml-->
+<view class="publicity">
+    <view class="img">
+        <image src="https://home.mati.hk/Public/web_image/publicity/publicity_01.png?a={{time}}" mode="widthFix" />
+        <image src="https://home.mati.hk/Public/web_image/publicity/publicity_02.png?a={{time}}" mode="widthFix" />
+        <image src="https://home.mati.hk/Public/web_image/publicity/publicity_03.png?a={{time}}" mode="widthFix" />
+        <image src="https://home.mati.hk/Public/web_image/publicity/publicity_04.png?a={{time}}" mode="widthFix" />
+        <image src="https://home.mati.hk/Public/web_image/publicity/publicity_05.png?a={{time}}" mode="widthFix" />
+        <image src="https://home.mati.hk/Public/web_image/publicity/publicity_06.png?a={{time}}" mode="widthFix" />
+        <image src="https://home.mati.hk/Public/web_image/publicity/publicity_07.png?a={{time}}" mode="widthFix" />
+    </view>
+    <view class="img">
+        <image src="https://home.mati.hk/Public/web_image/publicity/publicity_08.png?a={{time}}" mode="widthFix" />
+        <swiper indicator-dots="{{false}}" autoplay="true" duration="500" interval="4000">
+            <swiper-item>
+                <image class="swiper-image" src="https://home.mati.hk/Public/web_image/publicity/banner1.jpg?a={{time}}" mode="widthFix" width="200"
+                />
+            </swiper-item>
+            <swiper-item>
+                <image class="swiper-image" src="https://home.mati.hk/Public/web_image/publicity/banner2.jpg?a={{time}}" mode="widthFix" width="200"
+                />
+            </swiper-item>
+            <swiper-item>
+                <image class="swiper-image" src="https://home.mati.hk/Public/web_image/publicity/banner3.jpg?a={{time}}" mode="widthFix" width="200"
+                />
+            </swiper-item>
+            <swiper-item>
+                <image class="swiper-image" src="https://home.mati.hk/Public/web_image/publicity/banner4.jpg?a={{time}}" mode="widthFix" width="200"
+                />
+            </swiper-item>
+        </swiper>
+    </view>
+    <view class="img">
+        <image src="https://home.mati.hk/Public/web_image/publicity/publicity_09.png?a=1{{time}}" mode="widthFix" />
+        <image src="https://home.mati.hk/Public/web_image/publicity/publicity_10.png?a=1{{time}}" mode="widthFix" />
+    </view>
+</view>
