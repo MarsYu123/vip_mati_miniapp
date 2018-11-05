@@ -12,7 +12,7 @@ Page({
     user_bind: false, // 用户是否绑定
     load: true, //第一次加载
     hasUserInfo:false,
-    is_ios:true
+    is_ios:false
   },
   // 登陆成功后获取数据
   login_success: function (e) {

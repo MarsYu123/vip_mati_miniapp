@@ -8,6 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    is_ios:false,
     banner: [{'banner_img':'/web_image/vip/banner1.jpeg'}], // banner图
     advert: {'center_adv':'/web_image/vip/banner.png'}, //首页数据
     people_number: '',
@@ -23,7 +24,7 @@ Page({
     load: true, //第一次加载
     hasUserInfo: false,
     pay_text:'去抢购',
-    is_ios:false
+
   },
   // 登陆成功后获取数据
   login_success: function (e) {
@@ -46,12 +47,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    if(app.system == 'ios'){
-      this.setData({
-        pay_text:'了解详情',
-        is_ios: true
-      })
-    }
+      if(app.system == 'ios'){
+        this.setData({
+          pay_text:'了解详情',
+          is_ios: true
+        })
+      }
     console.log(options)
     if(options.course == 'true'){
       wx.navigateTo({
@@ -131,7 +132,10 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    this.data.load = false
+    this.setData({
+      load: false
+    })
   },
   imgload: function (e) {
     var winWid = wx.getSystemInfoSync().windowWidth; //获取当前屏幕的宽度

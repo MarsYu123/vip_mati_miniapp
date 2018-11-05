@@ -1,28 +1,31 @@
 <view class="long_vip">
     <view class="long_vip_box">
         <view class="vip_kv">
-            <image src="https://home.mati.hk/Public/web_image/long_vip/mt_kv.png?time=1" mode="widthFix" />
-            <view class="mt_ckeck">
-                <view class="check_item {{index == 4?'active':''}}" bindtap="checked" id="4">
-                    <image src="https://home.mati.hk/Public/web_image/long_vip/mt_kv_03.png?time=1" mode="widthFix" wx:if="{{!is_ios}}"/>
-                     <image src="https://home.mati.hk/Public/web_image/long_vip/mt_kv_03_ios.png?time=1" mode="widthFix" wx:else/>
-                    <text></text>
+            <block wx:if="{{!is_ios}}">
+                <image src="https://home.mati.hk/Public/web_image/long_vip/mt_kv.png?time=2" mode="widthFix" />
+            </block>
+            <block wx:else>
+                <image src="https://home.mati.hk/Public/web_image/long_vip/mt_kv1.png?time=2" mode="widthFix" />
+            </block>
+            <block wx:if="{{!is_ios}}">
+                <view class="mt_ckeck">
+                    <view class="check_item {{index == 4?'active':''}}" bindtap="checked" id="4">
+                        <image src="https://home.mati.hk/Public/web_image/long_vip/mt_kv_03.png?time=3" mode="widthFix" />
+                        <text></text>
+                    </view>
+                    <view class="check_item {{index == 5?'active':''}}" bindtap="checked" id="5">
+                        <image src="https://home.mati.hk/Public/web_image/long_vip/mt_kv_05.png?time=3" mode="widthFix" />
+                        <text></text>
+                    </view>
+                    <view class="check_item {{index == 6?'active':''}}" bindtap="checked" id="6">
+                        <image src="https://home.mati.hk/Public/web_image/long_vip/mt_kv_06.png?time=3" mode="widthFix" />
+                        <text></text>
+                    </view>
                 </view>
-                <view class="check_item {{index == 5?'active':''}}" bindtap="checked" id="5">
-                    <image src="https://home.mati.hk/Public/web_image/long_vip/mt_kv_05.png?time=1" mode="widthFix" wx:if="{{!is_ios}}"/>
-                       <image src="https://home.mati.hk/Public/web_image/long_vip/mt_kv_05_ios.png?time=1" mode="widthFix" wx:else/>
-                    <text></text>
-                </view>
-                <view class="check_item {{index == 6?'active':''}}" bindtap="checked" id="6">
-                    <image src="https://home.mati.hk/Public/web_image/long_vip/mt_kv_06.png?time=1" mode="widthFix" wx:if="{{!is_ios}}"/>
-                    <image src="https://home.mati.hk/Public/web_image/long_vip/mt_kv_06_ios.png?time=1" mode="widthFix" wx:else/>
-                    <text></text>
-                </view>
-
-            </view>
+            </block>
         </view>
         <view class="vip_msg">
-            <image src="https://home.mati.hk/Public/web_image/long_vip/mt_msg.png?time=1" mode="widthFix" />
+            <image src="https://home.mati.hk/Public/web_image/long_vip/mt_msg.png?time=3" mode="widthFix" />
             <text class="join_tisp one" bindtap="mt_tips"></text>
         </view>
     </view>

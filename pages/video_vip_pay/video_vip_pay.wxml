@@ -30,5 +30,5 @@
             </view>
         </block>
     </view>
-<button class="ios" wx:else open-type="contact">了解详情</button>
+    <button class="ios" wx:if="{{is_ios}}" open-type="contact">了解详情</button>
 </view>

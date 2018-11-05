@@ -41,7 +41,7 @@
   </view>
 
   <!-- 活动 -->
-  <view class="activity">
+  <view class="activity" wx:if="{{!load}}">
     <view class="act_item">
       <image src="https://home.mati.hk/Public/web_image/vip/vip.png?time={{d}}" />
       <view class="item_right">
@@ -58,12 +58,15 @@
           </view>
           <view class="money is_vip" wx:if="{{is_ios}}">
           </view>
-          <view wx:if="{{hasUserInfo}}" class="btn_pay" bindtap="long_vip" wx:if="{{!is_ios}}">
-            {{pay_text}}
-          </view>
-          <view wx:if="{{hasUserInfo}}" class="btn_pay ios" bindtap="long_vip" wx:if="{{is_ios}}">
-            {{pay_text}}
-          </view>
+          <block wx:if="{{hasUserInfo}}">
+             <view class="btn_pay" bindtap="long_vip" wx:if="{{!is_ios}}">
+              {{pay_text}}
+            </view>
+            <view class="btn_pay ios" bindtap="long_vip" wx:if="{{is_ios}}">
+              {{pay_text}}
+            </view>
+          </block>
+
           <block wx:if="{{!hasUserInfo}}">
             <button class="btn_pay" open-type="getUserInfo" bindgetuserinfo="getUserInfo_user" data-type="long_vip">
               {{pay_text}}
@@ -90,12 +93,15 @@
             <view>限时赠送马蹄网VIP会员</view>
             <view>https://www.mati.hk</view>
           </view>
-          <view wx:if="{{hasUserInfo}}" class="btn_pay" bindtap="video_vip" wx:if="{{!is_ios}}">
-            {{pay_text}}
-          </view>
-          <view wx:if="{{hasUserInfo}}" class="btn_pay ios" bindtap="long_vip" wx:if="{{is_ios}}">
-            {{pay_text}}
-          </view>
+          <block wx:if="{{hasUserInfo}}">
+            <view class="btn_pay" bindtap="video_vip" wx:if="{{!is_ios}}">
+              {{pay_text}}
+            </view>
+            <view class="btn_pay ios" bindtap="video_vip" wx:if="{{is_ios}}">
+              {{pay_text}}
+            </view>
+          </block>
+
           <block wx:if="{{!hasUserInfo}}">
             <button class="btn_pay" open-type="getUserInfo" bindgetuserinfo="getUserInfo_user" data-type="video_vip">
               {{pay_text}}
@@ -120,12 +126,15 @@
             马蹄网网址
             https://www.mati.hk
           </view>
-          <view wx:if="{{hasUserInfo}}" class="btn_pay" bindtap="mt_vip" wx:if="{{!is_ios}}">
-            {{pay_text}}
-          </view>
-          <view wx:if="{{hasUserInfo}}" class="btn_pay ios" bindtap="long_vip" wx:if="{{is_ios}}">
-            {{pay_text}}
-          </view>
+          <block wx:if="{{hasUserInfo}}">
+            <view class="btn_pay" bindtap="mt_vip" wx:if="{{!is_ios}}">
+              {{pay_text}}
+            </view>
+            <view class="btn_pay ios" bindtap="mt_vip" wx:if="{{is_ios}}">
+              {{pay_text}}
+            </view>
+          </block>
+
           <block wx:if="{{!hasUserInfo}}">
             <button class="btn_pay" open-type="getUserInfo" bindgetuserinfo="getUserInfo_user" data-type="mt_vip">
               {{pay_text}}

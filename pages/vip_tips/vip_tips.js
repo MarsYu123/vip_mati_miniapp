@@ -61,9 +61,9 @@ Page({
     var that = this;
     that.data.old_x = x;
     that.data.start = true;
-    that.setData({
+   /*  that.setData({
       page_overflow: 'hidden'
-    })
+    }) */
   },
   // 抬起清除记录
   touchend: function (e) {
@@ -77,9 +77,9 @@ Page({
         return false
       }
     }
-    this.setData({
-      page_overflow: 'auto'
-    })
+    // this.setData({
+    //   page_overflow: 'auto'
+    // })
 
   },
   // 移动记录坐标
