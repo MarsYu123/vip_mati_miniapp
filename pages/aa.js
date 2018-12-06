@@ -28,6 +28,10 @@ function wx_login(that) {
                 }
               })
             }
+          },
+          complete:e =>{
+            console.log('ssss')
+              console.log(e)
           }
         })
       } else {
@@ -103,6 +107,7 @@ function unlock(e) {
     header: app.header,
     dataType: 'json',
     success: e => {
+      console.log("解密解密")
       console.log(e)
       var data = e.data.data
       var jump_type = ''; //跳转辨识type

@@ -4,15 +4,6 @@
     <block wx:if="{{type == 'long_vip'}}">
         <image src="https://home.mati.hk/Public/web_image/vip_tips/long_vip_02.png?time={{n_hours}}" mode="widthFix" />
         <image src="https://home.mati.hk/Public/web_image/vip_tips/long_vip_03.png?time={{n_hours}}" mode="widthFix" />
-        <image src="https://home.mati.hk/Public/web_image/vip_tips/long_vip_04.png?time={{n_hours}}" mode="widthFix" />
-        <view class="swiper">
-            <view class="swiper_box" bindtouchstart="touchstart" bindtouchmove="touchmove" bindtouchend="touchend"
-                style="{{scroll_style}}">
-                <view class="swiper_item" wx:for="{{[1,2,3]}}">
-                    <image src="https://home.mati.hk/Public/web_image/vip_tips/banner{{item}}.jpg?time={{n_hours}}" mode="widthFix" class="{{scroll_index+1 == item?'active':''}}" data-src="https://home.mati.hk/Public/web_image/vip_tips/banner{{item}}.jpg?time={{n_hours}}" bindtap="open_img"/>
-                </view>
-            </view>
-        </view>
         <image src="https://home.mati.hk/Public/web_image/vip_tips/long_vip_06.png?time={{n_hours}}" mode="widthFix" />
     </block>
 
@@ -25,6 +16,6 @@
     <block wx:if="{{type == 'mt_vip'}}">
         <image src="https://home.mati.hk/Public/web_image/vip_tips/mt_vip_02.png?time={{n_hours}}" mode="widthFix"/>
         <image src="https://home.mati.hk/Public/web_image/vip_tips/mt_vip_03.png?time={{n_hours}}" mode="widthFix"/>
-        <image src="https://home.mati.hk/Public/web_image/vip_tips/mt_vip_04.png?time={{n_hours}}" mode="widthFix"/>
+        <image src="https://home.mati.hk/Public/web_image/vip_tips/mt_vip_04_new.png?time={{n_hours}}" mode="widthFix"/>
     </block>
 </view>

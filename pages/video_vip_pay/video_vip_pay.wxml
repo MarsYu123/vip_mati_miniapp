@@ -2,17 +2,13 @@
 <view class="long_vip">
     <view class="long_vip_box">
         <view class="vip_kv">
-            <image src="https://home.mati.hk/Public/web_image/long_vip/video_kv.png?time=1" mode="widthFix" wx:if="{{!is_ios}}"/>
-            <image src="https://home.mati.hk/Public/web_image/long_vip/video_kv_ios.png?time=1" mode="widthFix" wx:else/>
+            <image src="https://home.mati.hk/Public/web_image/long_vip/video_kv.png?time=4" mode="widthFix" wx:if="{{!is_ios}}"/>
+            <image src="https://home.mati.hk/Public/web_image/long_vip/video_kv_ios.png?time=4" mode="widthFix" wx:else/>
         </view>
         <view class="vip_msg">
-            <image src="https://home.mati.hk/Public/web_image/long_vip/video_msg.png?time=1" mode="widthFix" wx:if="{{!is_ios}}"/>
-             <image src="https://home.mati.hk/Public/web_image/long_vip/video_msg_ios.png?time=1" mode="widthFix" wx:else/>
+            <image src="https://home.mati.hk/Public/web_image/long_vip/video_msg.png?time=4" mode="widthFix" wx:if="{{!is_ios}}"/>
+             <image src="https://home.mati.hk/Public/web_image/long_vip/video_msg_ios.png?time=4" mode="widthFix" wx:else/>
             <text class="join_tisp one" bindtap="video_tips"></text>
-        </view>
-        <view class="vip_msg">
-            <image src="https://home.mati.hk/Public/web_image/long_vip/video_xs.png?time=1" mode="widthFix" wx:if="{{!is_ios}}"/>
-            <image src="https://home.mati.hk/Public/web_image/long_vip/video_xs_ios.png?time=1" mode="widthFix" wx:else/>
         </view>
     </view>
     <view class="pay" wx:if="{{!is_ios}}">

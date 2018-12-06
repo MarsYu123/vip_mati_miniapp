@@ -22,7 +22,8 @@ Page({
     history:{}, //往期课程
     online:{}, //上线
     user_info:{},//用户信息
-    is_ios: false
+    is_ios: false,
+    time:''
   },
 
   /**
@@ -67,7 +68,8 @@ Page({
           userlogin.getuser(that)
           that.setData({
             history: data.history,
-            online: data.online
+            online: data.online,
+            time: new Date().getDay()
           })
           if (data.is_buy == 0) {
             that.setData({

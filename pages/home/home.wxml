@@ -26,13 +26,13 @@
             <image src="https://home.mati.hk/Public/web_image/course/teacher.png" />
             <text>{{online[0].teacher}}</text>
           </view>
-          <view class="price" wx:if="{{!is_ios}}">
+          <view class="price">
             <image src="https://home.mati.hk/Public/web_image/course/price.png" />
             <text class="new_price">￥{{online[0].now_price}}</text>
             <text class="old_price" wx:if="{{online[0].old_price != ''}}">￥{{online[0].old_price}}</text>
             <text class="vip_tips" wx:if="{{!user_info.isFinalVIp || hasUserInfo == false}}">永久VIP会员免费</text>
           </view>
-          <block wx:if="{{!is_ios}}">
+          <block>
             <view class="now_pay" wx:if="{{user_info}}" data-id="{{online[0].id}}" data-kind="{{online[0].kind}}">
               {{user_info.isFinalVIp ? '立即报名':'立即购买'}}
             </view>
@@ -40,16 +40,11 @@
               立即报名
             </view>
           </block>
-          <block wx:else>
-            <view class="now_pay">
-              了解详情
-            </view>
-          </block>
         </view>
       </block>
       <block wx:else>
         <view class="default">
-          <image src="https://home.mati.hk/Public/web_image/home/default.png" mode='widthFix' />
+          <image src="https://home.mati.hk/Public/web_image/home/default.png?time={{time}}" mode='widthFix' />
         </view>
       </block>
     </view>

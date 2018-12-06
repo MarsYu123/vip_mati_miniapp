@@ -13,7 +13,7 @@ Page({
     user_bind: false, // 用户是否绑定
     load: true, //第一次加载
     hasUserInfo: false,
-    money:'9',
+    money:'19',
     is_ios:false
   },
   // 登陆成功后获取数据
@@ -114,11 +114,9 @@ Page({
     var id = e.currentTarget.id;
     var money = ''
     if(id == 4){
-      money = '9'
+      money = '19'
     }else if (id == 5){
-      money = '99'
-    }else if(id == 6){
-      money = '990'
+      money = '199'
     }
     this.setData({
       index: id,

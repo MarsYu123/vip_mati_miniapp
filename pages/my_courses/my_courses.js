@@ -45,7 +45,6 @@ Page({
             for (var i in data) {
               // data[i].teacher = data[i].teacher.replace(/[|]/g, " ");
               var status = data[i].status;
-              console.log(data[i].status)
               if (status == 0) {
                 data[i].status = "自用"
                 data[i].type = "购买"

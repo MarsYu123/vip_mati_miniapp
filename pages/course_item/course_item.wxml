@@ -7,7 +7,7 @@
             <view class="cover">
                 <image src="{{course_msg.cover}}" mode="widthFix" />
             </view>
-            <view class="kv_bottom" wx:if="{{online_flag == '0'}}" wx:if="{{!is_ios}}">
+            <view class="kv_bottom" wx:if="{{online_flag == '0'}}">
                 <view class="price">
                     ￥
                     <view class="new_price">{{course_msg.now_price}}</view>
@@ -69,7 +69,7 @@
         </view>
     </view>
     <block wx:if="{{online_flag == '0'}}">
-        <block wx:if="{{!is_ios}}">
+        <block>
             <view class="shop">
                 <block wx:if="{{hasUserInfo}}">
                     <block wx:if="{{!is_vip}}">
@@ -86,9 +86,6 @@
                     </button>
                 </block>
             </view>
-        </block>
-        <block wx:else>
-            <button class="buy" open-type="contact">了解详情</button>
         </block>
     </block>
     <block wx:else>

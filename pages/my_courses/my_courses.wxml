@@ -6,7 +6,7 @@
             <view class="cont">
                 <view class="item" wx:for="{{msg}}">
                     <view class="title_time">
-                        {{item.type}}时间：2018-09-10 15:12
+                        {{item.type}}时间：{{item.pay_time}}
                     </view>
                     <view class="item_msg">
                         <view class="item_left">

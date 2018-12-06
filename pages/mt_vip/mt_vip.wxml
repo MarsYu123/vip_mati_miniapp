@@ -2,7 +2,7 @@
     <view class="long_vip_box">
         <view class="vip_kv">
             <block wx:if="{{!is_ios}}">
-                <image src="https://home.mati.hk/Public/web_image/long_vip/mt_kv.png?time=2" mode="widthFix" />
+                <image src="https://home.mati.hk/Public/web_image/long_vip/mt_kv_new.png?time=2" mode="widthFix" />
             </block>
             <block wx:else>
                 <image src="https://home.mati.hk/Public/web_image/long_vip/mt_kv1.png?time=2" mode="widthFix" />
@@ -10,15 +10,11 @@
             <block wx:if="{{!is_ios}}">
                 <view class="mt_ckeck">
                     <view class="check_item {{index == 4?'active':''}}" bindtap="checked" id="4">
-                        <image src="https://home.mati.hk/Public/web_image/long_vip/mt_kv_03.png?time=3" mode="widthFix" />
+                        <image src="https://home.mati.hk/Public/web_image/long_vip/mt_kv_03_new.png.jpg?time=4" mode="widthFix" />
                         <text></text>
                     </view>
                     <view class="check_item {{index == 5?'active':''}}" bindtap="checked" id="5">
-                        <image src="https://home.mati.hk/Public/web_image/long_vip/mt_kv_05.png?time=3" mode="widthFix" />
-                        <text></text>
-                    </view>
-                    <view class="check_item {{index == 6?'active':''}}" bindtap="checked" id="6">
-                        <image src="https://home.mati.hk/Public/web_image/long_vip/mt_kv_06.png?time=3" mode="widthFix" />
+                        <image src="https://home.mati.hk/Public/web_image/long_vip/mt_kv_05_new.png.jpg?time=4" mode="widthFix" />
                         <text></text>
                     </view>
                 </view>

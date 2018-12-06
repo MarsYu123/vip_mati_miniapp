@@ -2,12 +2,12 @@
 <view class="long_vip">
     <view class="long_vip_box">
         <view class="vip_kv">
-            <image src="https://home.mati.hk/Public/web_image/long_vip/long_kv.png?time=2" mode="widthFix" wx:if="{{!is_ios}}" />
-            <image src="https://home.mati.hk/Public/web_image/long_vip/long_kv_ios.png?time=2" mode="widthFix" wx:else />
+            <image src="https://home.mati.hk/Public/web_image/long_vip/long_kv.png?time=5" mode="widthFix" wx:if="{{!is_ios}}" />
+            <image src="https://home.mati.hk/Public/web_image/long_vip/long_kv_ios.png?time=5" mode="widthFix" wx:else />
         </view>
         <view class="vip_msg">
-            <image src="https://home.mati.hk/Public/web_image/long_vip/long_msg.png?time=2" mode="widthFix" wx:if="{{!is_ios}}" />
-            <image src="https://home.mati.hk/Public/web_image/long_vip/long_msg_ios.png?time=2" mode="widthFix" wx:else />
+            <image src="https://home.mati.hk/Public/web_image/long_vip/long_msg.png?time=5" mode="widthFix" wx:if="{{!is_ios}}" />
+            <image src="https://home.mati.hk/Public/web_image/long_vip/long_msg_ios.png?time=5" mode="widthFix" wx:else />
             <text class="join_tisp long" bindtap="long_tips"></text>
         </view>
     </view>

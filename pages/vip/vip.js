@@ -24,6 +24,7 @@ Page({
     load: true, //第一次加载
     hasUserInfo: false,
     pay_text:'去抢购',
+    team_status: false // 是否取消拼团
 
   },
   // 登陆成功后获取数据
@@ -84,9 +85,10 @@ Page({
           advert: data.advert,
           people_number: data.people_number,
           time: data.advert.count_down,
-          new_money: new_money
+          new_money: new_money,
+          team_status: data.team_status
         })
-        this.countTime()
+        // this.countTime()
       },
       fail: () => {}
     });
@@ -150,6 +152,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   long_vip: function () {
+    console.log('ss')
     var that = this;
     if (that.data.user_bind) {
       wx.navigateTo({
@@ -166,7 +169,7 @@ Page({
         confirmColor: '#3CC51F',
         success: e => {
           if (e.confirm) {
-            that.type = 'long_vip'
+            that.type = 'video_vip'
             wx.navigateTo({
               url: '../login/login'
             })
